@@ -12,6 +12,7 @@
         <module>Auto</module>
         <module>Annotation</module>
         <module>AppConfig</module>
+        <module>Proxy</module>
     </modules>
 
     <dependencies>
