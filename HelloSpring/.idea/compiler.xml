@@ -9,6 +9,7 @@
         <module name="Auto" />
         <module name="AppConfig" />
         <module name="Proxy" />
+        <module name="AOP" />
         <module name="Annotation" />
       </profile>
     </annotationProcessing>

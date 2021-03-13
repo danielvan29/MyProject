@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com.van"/>
+
+    <!--开启注解支持-->
+    <context:annotation-config/>
+
+    <bean id="userService" class="com.van.service.impl.UserServiceImpl"/>
+    <bean id="afterLog" class="com.van.log.AfterLog"/>
+    <bean id="beforeLog" class="com.van.log.BeforeLog"/>
+    <bean id="customLog" class="com.van.log.CustomLog"/>
+    <bean id="annotationLog" class="com.van.log.AnnotationLog"/>
+
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;切入点&ndash;&gt;-->
+<!--        <aop:pointcut id="cut" expression="execution(* com.van.service.impl.UserServiceImpl.delete())"/>-->
+
+<!--        <aop:advisor advice-ref="beforeLog" pointcut-ref="cut"/>-->
+<!--        <aop:advisor advice-ref="afterLog" pointcut-ref="cut"/>-->
+<!--    </aop:config>-->
+
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="customLog">-->
+<!--            <aop:pointcut id="point" expression="execution( * com.van.service.impl.UserServiceImpl.add())"/>-->
+<!--            <aop:before method="before" pointcut-ref="point"/>-->
+<!--            <aop:after method="after" pointcut-ref="point"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+    <!--开启AOP注解-->
+    <aop:aspectj-autoproxy/>
+
+</beans>

@@ -13,6 +13,7 @@
         <module>Annotation</module>
         <module>AppConfig</module>
         <module>Proxy</module>
+        <module>AOP</module>
     </modules>
 
     <dependencies>
