@@ -16,10 +16,11 @@ public class AnnotationLog {
 
 
     @Around("execution( * com.van.service.impl.UserServiceImpl.select())")
-    public void around(ProceedingJoinPoint point) throws Throwable {
+    public Object around(ProceedingJoinPoint point) throws Throwable {
         System.out.println("begin around");
-        point.proceed();
+        Object proceed = point.proceed();
         System.out.println("end around");
+        return proceed;
     }
 
     @After("execution( * com.van.service.impl.UserServiceImpl.select())")

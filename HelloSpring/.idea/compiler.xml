@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Auto" />
         <module name="AppConfig" />
+        <module name="IntegrateMybatis" />
         <module name="Proxy" />
         <module name="AOP" />
         <module name="Annotation" />
