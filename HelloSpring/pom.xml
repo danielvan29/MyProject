@@ -15,6 +15,7 @@
         <module>Proxy</module>
         <module>AOP</module>
         <module>IntegrateMybatis</module>
+        <module>Transaction</module>
     </modules>
 
     <dependencies>
