@@ -10,7 +10,7 @@
 </head>
 <body>
 
-${msg}
+${test}
 
 </body>
 </html>

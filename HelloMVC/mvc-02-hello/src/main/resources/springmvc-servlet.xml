@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
+    <!--处理器映射器-->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!--处理器适配器-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
     <!--视图解析器-->
@@ -15,6 +17,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!--BeanNameUrlHandlerMapping-->
     <bean id="/hello" class="com.van.controller.HelloController"/>
 
 </beans>
