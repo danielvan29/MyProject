@@ -9,6 +9,14 @@ public class HelloController {
 
     @RequestMapping(value = "/hello")
     public String hello(Model model) {
+        System.out.println("do hello");
+        model.addAttribute("test", "HelloMVC1");
+        return "hello";
+    }
+
+    @RequestMapping(value = "/")
+    public String hello1(Model model) {
+        System.out.println("do hello1");
         model.addAttribute("test", "HelloMVC1");
         return "hello";
     }
