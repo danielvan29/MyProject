@@ -3,11 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-    <!--优先使用外部配置文件-->
-    <properties resource="db.properties">
-        <property name="pwd" value="654321"/>
-    </properties>
     
     <!--为实体类起别名，也可使用注解Alias-->
     <typeAliases>
