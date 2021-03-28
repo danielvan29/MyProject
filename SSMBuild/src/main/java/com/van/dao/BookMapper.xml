@@ -21,7 +21,7 @@
         select * from ssmbuild.books where bookID = #{bookID};
     </select>
 
-    <select id="queryBook" resultType="Books">
+    <select id="queryBooks" resultType="Books">
         select * from ssmbuild.books
     </select>
 
