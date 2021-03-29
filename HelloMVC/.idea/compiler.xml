@@ -10,6 +10,7 @@
         <module name="mvc-05-json" />
         <module name="mvc-01-servlet" />
         <module name="mvc-02-hello" />
+        <module name="mvc-07-intercepter" />
         <module name="mvc-04-restful" />
       </profile>
     </annotationProcessing>

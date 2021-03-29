@@ -14,6 +14,7 @@
         <module>mvc-03-annotation</module>
         <module>mvc-04-restful</module>
         <module>mvc-05-json</module>
+        <module>mvc-07-intercepter</module>
     </modules>
 
     <dependencies>
