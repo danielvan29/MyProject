@@ -1,0 +1,15 @@
+#使用锚点&和别名*来进行引用
+dog: &dog1
+  name: bob
+  age: 0
+
+person:
+  name: tom
+  age: 14
+  birth: 2002/03/04
+  list:
+    - soccer
+    - game
+  map: {k1: v1,k2: v2}
+  happy: true
+  dog: *dog1
