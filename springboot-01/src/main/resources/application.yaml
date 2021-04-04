@@ -13,3 +13,24 @@ person:
   map: {k1: v1,k2: v2}
   happy: true
   dog: *dog1
+
+#配置多环境并切换
+server:
+  port: 8083
+spring:
+  profiles:
+    active: sit
+---
+server:
+  port: 8082
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+server:
+  port: 8084
+spring:
+  config:
+    activate:
+      on-profile: sit
