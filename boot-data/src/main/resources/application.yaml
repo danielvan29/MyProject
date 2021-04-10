@@ -5,3 +5,8 @@ spring:
     username: van
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.van.bootdata.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
