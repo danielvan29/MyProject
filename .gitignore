@@ -1,1 +1,3 @@
-/boot-shiro/.idea/
+/**/.idea/
+/**/target/
+*.iml
