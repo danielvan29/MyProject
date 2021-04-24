@@ -7,10 +7,10 @@
 	http://code.alibabatech.com/schema/dubbo
 	https://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!-- 服务应用名称 -->
-    <dubbo:application name="provider"/>
-    <!-- 使用zookeeper做为注册中心 -->
-    <dubbo:registry  protocol="zookeeper" address="zookeeper://47.115.172.160:2181"/>
-    <!-- ref中的值要跟服务实现类中的@Server的值一致 -->
-    <dubbo:service interface="com.daniel.provider.service.TicketService" ref="ticketService"/>
+    <!-- 应用名称 -->
+    <dubbo:application name="consumer" />
+    <!-- zookeeper作为注册中心 -->
+    <dubbo:registry  protocol="zookeeper" address="zookeeper://47.115.172.160:2181" />
+    <!-- 生成远程服务代理 -->
+    <dubbo:reference id="ticketService" check="false" interface="com.daniel.provider.service.TicketService"/>
 </beans>

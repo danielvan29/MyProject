@@ -1,4 +1,4 @@
-package com.van.provider.service;
+package com.daniel.provider.service;
 
 public interface TicketService {
     String buyTicket();

@@ -1,6 +1,6 @@
-package com.van.provider.service.impl;
+package com.daniel.provider.service.impl;
 
-import com.van.provider.service.TicketService;
+import com.daniel.provider.service.TicketService;
 import org.springframework.stereotype.Service;
 
 //@Service：Dubbo也有Service注解，所以用Component区分一下
@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
 public class TicketServiceImpl implements TicketService {
     @Override
     public String buyTicket() {
-        return "buy";
+        return "new buy";
     }
 }
