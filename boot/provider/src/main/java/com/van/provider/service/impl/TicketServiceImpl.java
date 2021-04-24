@@ -1,7 +1,6 @@
-package com.van.service.impl;
+package com.van.provider.service.impl;
 
-import com.van.service.TicketService;
-import org.springframework.stereotype.Component;
+import com.van.provider.service.TicketService;
 import org.springframework.stereotype.Service;
 
 //@Service：Dubbo也有Service注解，所以用Component区分一下

@@ -1,4 +1,4 @@
-package com.van;
+package com.van.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
