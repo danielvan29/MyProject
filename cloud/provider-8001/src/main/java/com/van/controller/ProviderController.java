@@ -1,8 +1,11 @@
 package com.van.controller;
 
+import com.netflix.discovery.converters.Auto;
 import com.van.pojo.Teacher;
 import com.van.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +15,15 @@ import java.util.List;
 @RestController
 public class ProviderController {
 
-    final
-    TeacherService teacherService;
+    private final TeacherService teacherService;
+
+    //获取微服务的配置信息
+    private final DiscoveryClient client;
 
     @Autowired
-    public ProviderController(TeacherService teacherService) {
+    public ProviderController(TeacherService teacherService, DiscoveryClient client) {
         this.teacherService = teacherService;
+        this.client = client;
     }
 
     @RequestMapping("/provide")
@@ -34,5 +40,19 @@ public class ProviderController {
         Teacher teacher = teacherService.getTeacher(id);
         System.out.println(teacher);
         return teacher;
+    }
+
+    @RequestMapping("/discover")
+    public Object getDiscovery() {
+        List<String> services = client.getServices();
+        System.out.println(services);
+
+        List<ServiceInstance> instances = client.getInstances("PROVIDER-8001");
+        for (ServiceInstance instance : instances) {
+            System.out.println("host:" + instance.getHost());
+            System.out.println("port:" + instance.getPort());
+        }
+
+        return this.client;
     }
 }
