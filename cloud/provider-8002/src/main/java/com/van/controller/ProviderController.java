@@ -1,6 +1,5 @@
 package com.van.controller;
 
-import com.netflix.discovery.converters.Auto;
 import com.van.pojo.Teacher;
 import com.van.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +37,7 @@ public class ProviderController {
     @RequestMapping("/tea/{id}")
     public Teacher tea(@PathVariable("id") int id) {
         Teacher teacher = teacherService.getTeacher(id);
-        System.out.println(8001);
+        System.out.println(8002);
         return teacher;
     }
 
