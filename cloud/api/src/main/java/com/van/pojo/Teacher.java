@@ -19,16 +19,18 @@ public class Teacher {
         return id;
     }
 
-    public void setId(int id) {
+    public Teacher setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Teacher setName(String name) {
         this.name = name;
+        return this;
     }
 
     @Override

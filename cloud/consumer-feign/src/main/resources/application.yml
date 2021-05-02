@@ -8,3 +8,8 @@ eureka:
 spring:
   application:
     name: consumer
+
+#开启断路器支持
+feign:
+  circuitbreaker:
+    enabled: true

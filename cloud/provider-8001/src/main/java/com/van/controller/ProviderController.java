@@ -1,9 +1,9 @@
 package com.van.controller;
 
-import com.netflix.discovery.converters.Auto;
 import com.van.pojo.Teacher;
 import com.van.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +21,7 @@ public class ProviderController {
     private final DiscoveryClient client;
 
     @Autowired
-    public ProviderController(TeacherService teacherService, DiscoveryClient client) {
+    public ProviderController(@Qualifier("teacherServiceImpl") TeacherService teacherService, DiscoveryClient client) {
         this.teacherService = teacherService;
         this.client = client;
     }
