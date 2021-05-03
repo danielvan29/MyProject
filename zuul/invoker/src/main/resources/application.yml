@@ -1,0 +1,20 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: Invoker-01
+
+spring:
+  application:
+    name: invoker
+
+#开启断路器支持
+feign:
+  circuitbreaker:
+    enabled: true

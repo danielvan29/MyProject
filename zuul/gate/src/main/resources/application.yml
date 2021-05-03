@@ -1,0 +1,18 @@
+#eureka:
+#  instance:
+#    hostname: localhost
+#    instance-id: GateWay-80
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7001/eureka/
+#
+#spring:
+#  application:
+#    name: gateway
+#
+#zuul:
+#  retryable: true
+#  routes:
+#    service01:
+#      path: /service01/**
+#      service-id: invoker
