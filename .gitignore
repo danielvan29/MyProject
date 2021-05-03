@@ -3,3 +3,6 @@
 *.iml
 /**/out/
 QuickStart.java
+/**/.mvn
+/**/mvnw*
+/**/.gitignore
