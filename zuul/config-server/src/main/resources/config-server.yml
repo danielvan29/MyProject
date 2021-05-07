@@ -1,0 +1,19 @@
+spring:
+  profile:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  application:
+    name: config-dev
+port: 9999
+
+---
+
+spring:
+  profiles: sit
+  application:
+    name: config-sit
+port: 9998

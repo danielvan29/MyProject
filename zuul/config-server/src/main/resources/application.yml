@@ -1,0 +1,23 @@
+server:
+  port: 5001
+
+#spring:
+#  application:
+#    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/danielvan29/MyProject
+#          search-paths: cloud-config
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/
+  profiles:
+    active: native
+  application:
+    name: config-server-dev
