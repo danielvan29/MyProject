@@ -1,4 +1,4 @@
-package com.van.rabbitmq.simple;
+package com.van.rabbitmq.direct;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -33,9 +33,10 @@ public class Producer {
              * @params5:附加参数
              */
             String queueName = "queue1";
-            channel.queueDeclare(queueName, false, false, true, null);
-            String msg = "hello mq";
-            channel.basicPublish("", queueName, null, msg.getBytes());
+            //channel.queueDeclare(queueName, false, false, true, null);
+            String msg = "hello myFanout";
+            String routKey = "";
+            channel.basicPublish("myFanout", routKey, null, msg.getBytes());
             System.out.println("消息推送成功");
         } catch (Exception e) {
             e.printStackTrace();
