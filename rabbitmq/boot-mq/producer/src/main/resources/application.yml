@@ -1,0 +1,10 @@
+server:
+  port: 7001
+
+spring:
+  rabbitmq:
+    host: 47.115.172.160
+    port: 5672
+    username: van
+    password: 15119323532
+    virtual-host: /
