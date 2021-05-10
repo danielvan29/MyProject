@@ -18,4 +18,10 @@ public class OrderController {
         orderService.order(id);
         return "下单成功";
     }
+
+    @RequestMapping("/ttl/{id}")
+    public String ttlOrder(@PathVariable("id") String id) {
+        orderService.ttlOrder(id);
+        return "ttl成功";
+    }
 }
