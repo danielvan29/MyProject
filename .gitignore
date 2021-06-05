@@ -6,3 +6,4 @@ QuickStart.java
 /**/.mvn
 /**/mvnw*
 /**/.gitignore
+/**/*.hprof
