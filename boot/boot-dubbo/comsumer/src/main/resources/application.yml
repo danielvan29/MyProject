@@ -1,0 +1,7 @@
+dubbo:
+  application:
+    name: consumer
+  registry:
+    address: zookeeper://localhost
+    port: 2181
+    timeout: 10000
